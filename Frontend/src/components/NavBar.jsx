@@ -8,13 +8,16 @@ const NavBar = () => {
   const { user, logoutUser } = useContext(AuthContext);
 
   return (
-    <Navbar bg="dark" className="mb-4" style={{ height: "3.75rem" }}>
+    <Navbar bg="black" className="mb-4" style={{ height: "10.75 rem" }}>
       <Container>
         <h2>
           <Link to="/" className="link-light text-decoration-none">
-            ChattApp
+            <img
+              src = "/src/assets/coldbox-logo.png" alt = "logo" style = {{height: "2.5 rem"}}
+            />
+            Chat Online
           </Link>
-        </h2>
+          </h2>
         {user && <span className="text-warning">Logged in as {user.name}</span>}
         <Nav>
           <Stack direction="horizontal" gap={3}>
